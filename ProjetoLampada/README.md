@@ -1,0 +1,1 @@
+Troca dinâmica de imagens usando JavaScript.
