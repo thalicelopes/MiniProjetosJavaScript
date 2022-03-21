@@ -1,5 +1,4 @@
-const Ligar = document.getElementById('Ligar');
-const Desligar = document.getElementById('Desligar');
+const LigarDesligar = document.getElementById('LigarDesligar');
 const Resetar = document.getElementById('Resetar');
 const lamp = document.getElementById('lampada');
 
@@ -14,12 +13,25 @@ function desligarLampada () {
 }
 function QuebrarLampada (){
     lamp.src = './Imagens/quebrada.jpg';
+    Resetar.hidden = false;
+    LigarDesligar.hidden = true;
 }
 function resetarLampada (){
     lamp.src = './Imagens/desligada.jpg';
+    Resetar.hidden = true;
+    LigarDesligar.hidden = false;
 }
-Ligar.addEventListener('click', ligarLampada);
-Desligar.addEventListener('click', desligarLampada);
+function OnOff (){
+    if (LigarDesligar.textContent == 'Ligar'){
+        ligarLampada();
+        LigarDesligar.textContent = 'Desligar';
+    }
+    else{
+        desligarLampada();
+        LigarDesligar.textContent = 'Ligar';
+    }
+}
+LigarDesligar.addEventListener('click', OnOff);
 Resetar.addEventListener('click', resetarLampada);
 lamp.addEventListener('mouseover', ligarLampada);
 lamp.addEventListener('mouseleave', desligarLampada);
