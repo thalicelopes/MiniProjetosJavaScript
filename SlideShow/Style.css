@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.ConteudoSlide{
+    display: flex;
+    width: 50vw;
+    height: 50vh;
+    
+}
