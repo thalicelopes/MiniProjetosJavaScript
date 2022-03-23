@@ -4,7 +4,57 @@
 }
 .ConteudoSlide{
     display: flex;
+    justify-content: space-between;
     width: 50vw;
     height: 50vh;
+    background-color: black;
+    margin: 20vh auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px black;
+}
+#itens{
+    position: absolute;
+    display: flex;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+    overflow: hidden;
     
+}
+#Titulo{
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+.item{
+    width: 50vw;
+    height: 50vh;
+    transition: all 1s;
+}
+.item:first-child{
+    margin-left: -100%;
+
+}
+.item img{
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+}
+.BotaoAcao{
+    font: bold 30px sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    color: #00000000;
+    user-select: none;
+    z-index: 1;
+}
+.BotaoAcao:hover{
+    color: white;
+    background-color: #00000055;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1s;
 }
