@@ -1,0 +1,9 @@
+#main {
+    align-items: center;
+}
+
+.tabela {
+    border: 1rem solid;
+    width: 70%;
+    height: 70%;
+}

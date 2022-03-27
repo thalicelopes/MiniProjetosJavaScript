@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <button type="button" onclick="load()" id="Jogo">Jogar</button>
+    <form onsubmit="Verificar()" id="formJogo" hidden>
+        <label>Jogador 1: </label><input type="text" id="Jogador1"><br><br>
+        <label>Jogador 2: </label><input type="text" id="Jogador2"><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <div id="main" hidden>
+        <p id="paragrafo">
+            Seja bem vindo!
+        </p>
+        <p>Vez de: </p>
+        <p id="Game"></p>
+        <p>Escolha uma casa: </p>
+        <table border: 1rem solid;>
+            <tr class="tabela">
+                <td><button id="1" onclick="game(this.id)">Casa 1</button></td>
+                <td><button id="2" onclick="game(this.id)">Casa 2</button></td>
+                <td><button id="3" onclick="game(this.id)">Casa 3</button></td>
+            </tr>
+            <tr>
+                <td><button id="4" onclick="game(this.id)">Casa 4</button></td>
+                <td><button id="5" onclick="game(this.id)">Casa 5</button></td>
+                <td><button id="6" onclick="game(this.id)">Casa 6</button></td>
+            </tr>
+            <tr>
+                <td><button id="7" onclick="game(this.id)">Casa 7</button></td>
+                <td><button id="8" onclick="game(this.id)">Casa 8</button></td>
+                <td><button id="9" onclick="game(this.id)">Casa 9</button></td>
+            </tr>
+        </table>
+    </div>
+    <div id="score"></div>
+</body>
+
+</html>
+<script src="./JogoDaVelha.js"></script>
