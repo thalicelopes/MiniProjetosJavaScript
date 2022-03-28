@@ -32,22 +32,23 @@
         let botao9 = document.getElementById(9);
         botao9.textContent = "Casa 9";
         botao9.disabled = false;
-        // var textoparagrafoJogador = document.getElementById("textoparagrafoJogador");
-        // textoparagrafoJogador.remove();
         var paragrafoJogador = document.getElementById("paragrafoJogador");
         paragrafoJogador.remove();
+        // let botaoRecomecar = document.getElementById("restart");
+        // botaoRecomecar.remove();
         if (Game.textContent == Jogador1){
-            jogo(Jogador2, Jogador1);
+            var aux1 = Jogador2;
+            var aux3 = Jogador1;
+            Teste(aux3, aux1);
         }
         else{
-            jogo(Jogador1, Jogador2);
+            var aux = Jogador1;
+            var aux2 = Jogador2;
+            Teste(aux2, aux);
         }
     }
-    const nome = (nome) => {
-        let Jog1 = document.getElementById("Jogador1").value;
-        let Jog2 = document.getElementById("Jogador2").value;
-        if (nome == Jog1) return Jog1.value;
-        else return Jog2.value;
+    const Teste = (aux, aux2) =>{
+        console.log(aux.value + aux2.value);
     }
 
     function handleForm(event) { event.preventDefault(); }
@@ -86,7 +87,6 @@
         let s = document.createTextNode(Jogador1.value);
         paragrafo.appendChild(p);
         game.appendChild(s);
-        // p.setAttribute("id", "textoparagrafoJogador");
         paragrafo.setAttribute("id", "paragrafoJogador");
     }
     
@@ -124,8 +124,8 @@
                 let maintext = document.getElementById("main");
                 maintext.appendChild(p);
                 maintext.appendChild(botao);
-                var botaoRestart = document.getElementById("restart");
-                botaoRestart.addEventListener("click", recomecar);
+                let botaoRestart = document.getElementById("restart");
+                botaoRestart.addEventListener("click", recomecar(Jog2, Jog1));
             }
             else{
                 game.textContent = Jog2.value;
@@ -161,6 +161,8 @@
                 let maintext = document.getElementById("main");
                 maintext.appendChild(p);
                 maintext.appendChild(botao);
+                let botaoRestart = document.getElementById("restart");
+                botaoRestart.addEventListener("click", recomecar(Jog1, Jog2));
             }
             else{
                 game.textContent = Jog1.value;

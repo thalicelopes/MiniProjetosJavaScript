@@ -1,0 +1,1 @@
+Feito com troca dinâmica de imagens utilizando JavaScript. 
