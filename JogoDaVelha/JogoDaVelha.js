@@ -2,6 +2,7 @@ var formulario = document.getElementById("formJogo");
 var Jogo = document.getElementById("Jogo");
 var Jogador1 = document.getElementById("Jogador1");
 var Jogador2 = document.getElementById("Jogador2");
+var rodada = 0;
 function recomecar() {
     let Game = document.getElementById("Game");
     let botao1 = document.getElementById(1);
@@ -92,7 +93,8 @@ const game = (Valor) => {
             (Casa3.textContent == Casa5.textContent && Casa3.textContent == Casa7.textContent && Casa5.textContent == Casa7.textContent) ||
             (Casa1.textContent == Casa5.textContent && Casa1.textContent == Casa9.textContent && Casa5.textContent == Casa9.textContent)) {
             let p = document.createElement("p");
-            let texto = document.createTextNode("O vencedor é: " + Jog1.value + ". Fim de jogo.");
+            rodada++;
+            let texto = document.createTextNode("O vencedor da rodada " + rodada + " é: " + Jog1.value + ". Fim de jogo.");
             p.appendChild(texto);
             let maintext = document.getElementById("main");
             maintext.appendChild(p);
@@ -101,7 +103,8 @@ const game = (Valor) => {
         else if (Casa1.disabled == true && Casa2.disabled == true && Casa3.disabled == true && Casa4.disabled == true
             && Casa5.disabled == true && Casa6.disabled == true && Casa7.disabled == true && Casa8.disabled == true && Casa9.disabled) {
             let p = document.createElement("p");
-            let texto = document.createTextNode("DEU VELHA! Ninguém ganhou :(");
+            rodada++;
+            let texto = document.createTextNode("DEU VELHA! Ninguém ganhou a rodada " + rodada + " :(");
             p.appendChild(texto);
             let maintext = document.getElementById("main");
             maintext.appendChild(p);
@@ -132,7 +135,8 @@ const game = (Valor) => {
             (Casa3.textContent == Casa5.textContent && Casa3.textContent == Casa7.textContent && Casa5.textContent == Casa7.textContent) ||
             (Casa1.textContent == Casa5.textContent && Casa1.textContent == Casa9.textContent && Casa5.textContent == Casa9.textContent)) {
             let p = document.createElement("p");
-            let texto = document.createTextNode("O vencedor é: " + Jog2.value + ". Fim de Jogo.");
+            rodada++;
+            let texto = document.createTextNode("O vencedor da rodada " + rodada + " é: " + Jog2.value + ". Fim de jogo.");
             p.appendChild(texto);
             let maintext = document.getElementById("main");
             maintext.appendChild(p);
@@ -141,7 +145,8 @@ const game = (Valor) => {
         else if (Casa1.disabled == true && Casa2.disabled == true && Casa3.disabled == true && Casa4.disabled == true
             && Casa5.disabled == true && Casa6.disabled == true && Casa7.disabled == true && Casa8.disabled == true && Casa9.disabled) {
             let p = document.createElement("p");
-            let texto = document.createTextNode("DEU VELHA! Ninguém ganhou :(");
+            rodada++;
+            let texto = document.createTextNode("DEU VELHA! Ninguém ganhou a rodada " + rodada + " :(");
             p.appendChild(texto);
             let maintext = document.getElementById("main");
             maintext.appendChild(p);
