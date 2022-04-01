@@ -4,8 +4,19 @@ const formatarDigito = (digito) => `0${digito}`.slice(-2);
 
 const atualizar = (tempo) => {
     const segundos = document.getElementById('segundos');
+    const minutos = document.getElementById('minutos');
+    const horas = document.getElementById('horas');
+    const dias = document.getElementById('dias');
+
     const qtdSegundos = tempo % 60;
-    segundos.textContent = formatarDigito(tempo);
+    const qtdMinutos = Math.floor((tempo % (60 * 60)) / 60);
+    const qtdHoras = Math.floor((tempo % (60 * 60 * 24)) / (60 * 60));
+    const qtdDias = Math.floor(tempo / (60 * 60 * 24));
+
+    segundos.textContent = formatarDigito(qtdSegundos);
+    minutos.textContent = formatarDigito(qtdMinutos);
+    horas.textContent = formatarDigito(qtdHoras);
+    dias.textContent = formatarDigito(qtdDias);
 }
 const contagemRegressiva = (tempo) => {
     const pararContagem = () => {
@@ -21,4 +32,10 @@ const contagemRegressiva = (tempo) => {
     }
     const id = setInterval(contar, 1000);
 }
-contagemRegressiva(90);
+
+const tempoRestante = () => {
+    const dataEvento = new Date('2022-04-02 20:00:00');
+    const dataHoje = Date.now();
+    return Math.floor((dataEvento - dataHoje) / 1000);
+}
+contagemRegressiva(tempoRestante());

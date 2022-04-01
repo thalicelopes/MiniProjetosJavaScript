@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-image: url('./img/bkg.jpg');
     color: whitesmoke;
     font-family: 'Montserrat', sans-serif;
     user-select: none;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -21,28 +23,19 @@ body{
     text-align: center;
     background-color: #00000090;
 }
-.title{
+
+.title {
     font-size: calc(10px + 3vw);
 }
-.countdown{
+
+.countdown {
     display: flex;
     width: 60vw;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.countdown h1{
+
+.countdown h1 {
     font-size: calc(10px + 7vw);
     text-shadow: 0 0 10px whitesmoke;
-}
-.button {
-    background-color: whitesmoke;
-    color: black;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 20px;
-    border: solid 2px whitesmoke;
-}
-.button:hover{
-    background-color: black;
-    color: whitesmoke;
 }
