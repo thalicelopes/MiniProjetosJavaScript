@@ -4,5 +4,6 @@ Repositório criado com o objetivo de versionar pequenos projetos desenvolvidos 
 - Lâmpada dinâmica;
 - Semáforo;
 - SlideShow;
-- Jogo da Velha.
-- Countdown
+- Jogo da Velha;
+- Countdown;
+- To Do List.
