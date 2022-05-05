@@ -6,4 +6,5 @@ Repositório criado com o objetivo de versionar pequenos projetos desenvolvidos 
 - SlideShow;
 - Jogo da Velha;
 - Countdown;
-- To Do List.
+- To Do List;
+- Em Progresso: Calculadora 
